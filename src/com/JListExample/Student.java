@@ -15,6 +15,8 @@ public class Student {
     public String toString() {
         return "{ name="+ firstName +", cne=" + cne + '}';
     }
+
+
     public String toStringLong(){
         return "Student{" +
                 "firstName='" + firstName + '\'' +

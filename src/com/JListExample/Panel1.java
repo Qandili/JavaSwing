@@ -31,13 +31,15 @@ class JlistPanel extends JPanel implements ListSelectionListener{
         students.addStudent(new Student("imad","allouli",12314));
         students.addStudent(new Student("something","else",12456));
         students.addStudent(new Student("amine","elmissaoui",97211));
+        students.addStudent(new Student("pppppp","oooo",97211));
+        students.addStudent(new Student("awjaosifha","sckusdhc",97211));
         studentsList=new JList();
         studentsList.setListData(students.students);
         add(studentsList);
         studentsList.addListSelectionListener(this);
         //Jscroll pane to limit the display of my data
         scroll=new JScrollPane(studentsList);
-        studentsList.setVisibleRowCount(3);
+        studentsList.setVisibleRowCount(4);
         add(scroll);
     }
 
