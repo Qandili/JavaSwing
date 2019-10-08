@@ -1,7 +1,11 @@
 package com.Javaexxercise;
 
+import javax.swing.*;
+
 public class Main {
     public static void main(String[] args) {
-        new MaFenetre();
+
+        JFrame fenetre = new  MaFenetre();
+
     }
 }
