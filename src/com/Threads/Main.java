@@ -1,16 +1,33 @@
 package com.Threads;
 
 public class Main {
-    public static void main(String[] args) {
-        MyThread myThread=new MyThread(10,"bonjour");
-        MyThread myThread2=new MyThread(3,"Bonsoir");
-        MyThread myThread3=new MyThread(20,"Bonne nuit");
-        System.out.println(Runtime.getRuntime().availableProcessors());
-        System.out.println("debut ");
+    public static void main(String[] args) throws InterruptedException {
+        MyThread myThread=new MyThread(10,"a",0);
+        MyThread myThread2=new MyThread(10,"b",1);
+
+//        MyThread myThread3=new MyThread(20,"c");
+
+        System.out.println("debut");
+
         myThread.start();
         myThread2.start();
-        myThread3.start();
-        System.out.println("fin ");
+
+
+        myThread.join();
+        myThread2.join();
+
+
+//        Thread.sleep(100);
+
+        System.out.println("\nfin");
+
+
+        // attendre jusqu'a les deux thread ont finis
+
+//        myThread.join();
+//        myThread2.join();
+//        myThread3.start();
+
 
     }
 }
